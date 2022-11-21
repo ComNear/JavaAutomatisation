@@ -32,7 +32,7 @@ public class NumberGenerator {
     }
 
     public static String generateNumber(int bound) {
-        String number;
-        return number = String.valueOf(RandomGenerator.getDefault().nextInt(0, bound));
+
+    return String.valueOf(RandomGenerator.getDefault().nextInt(0, bound));
     }
 }

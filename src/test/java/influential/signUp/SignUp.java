@@ -1,13 +1,10 @@
 package influential.signUp;
-
 import influential.NumberGenerator;
 import influential.WebDriverSettings;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.random.RandomGenerator;
-
 
 public class SignUp extends WebDriverSettings {
 
