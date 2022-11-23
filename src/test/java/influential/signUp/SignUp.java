@@ -42,17 +42,19 @@ public class SignUp extends WebDriverSettings {
 
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
         signUpPage.submitForm();
-        signUpPage.checkErrorRequiredFields();
 
-        Assert.assertEquals(signUpPage.getErrorFirstNameText(), "First name is required.");
-        Assert.assertEquals(signUpPage.getErrorLastNameText(), "Last name is required.");
-        Assert.assertEquals(signUpPage.getErrorAddressText(), "Address is required.");
-        Assert.assertEquals(signUpPage.getErrorCityText(), "City is required.");
-        Assert.assertEquals(signUpPage.getErrorStateText(), "State is required.");
-        Assert.assertEquals(signUpPage.getErrorZipCodeText(), "Zip Code is required.");
-        Assert.assertEquals(signUpPage.getErrorSNNText(), "Social Security Number is required.");
-        Assert.assertEquals(signUpPage.getErrorUsernameText(), "Username is required.");
-        Assert.assertEquals(signUpPage.getErrorPasswordText(), "Password is required.");
-        Assert.assertEquals(signUpPage.getErrorConfirmPasswordText(), "Password confirmation is required.");
+        SignUpFailurePage signUpFailurePage = PageFactory.initElements(driver, SignUpFailurePage.class);
+        signUpFailurePage.checkErrorRequiredFields();
+
+        Assert.assertEquals(signUpFailurePage.getErrorFirstNameText(), "First name is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorLastNameText(), "Last name is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorAddressText(), "Address is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorCityText(), "City is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorStateText(), "State is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorZipCodeText(), "Zip Code is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorSNNText(), "Social Security Number is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorUsernameText(), "Username is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorPasswordText(), "Password is required.");
+        Assert.assertEquals(signUpFailurePage.getErrorConfirmPasswordText(), "Password confirmation is required.");
     }
 }
