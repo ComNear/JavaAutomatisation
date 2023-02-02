@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import parabank.readProperties.ConfigProvider;
 
 import java.time.Duration;
 
@@ -23,9 +24,8 @@ public class HomePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    //TODO забить в конфиги
     public void open() {
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
+        driver.get(ConfigProvider.TEST_SITE_URL);
     }
 
     public void getStarted() {

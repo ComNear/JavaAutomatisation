@@ -1,7 +1,7 @@
 package parabank.signUp;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.support.PageFactory;
 import parabank.NumberGenerator;
 import parabank.signUp.utils.HomePage;
@@ -50,15 +50,15 @@ public class SignUpTest extends AbstractWebDriverTest {
         SignUpFailurePage signUpFailurePage = PageFactory.initElements(driver, SignUpFailurePage.class);
         signUpFailurePage.checkErrorRequiredFields();
 
-        Assert.assertEquals(signUpFailurePage.getErrorFirstNameText(), "First name is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorLastNameText(), "Last name is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorAddressText(), "Address is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorCityText(), "City is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorStateText(), "State is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorZipCodeText(), "Zip Code is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorSNNText(), "Social Security Number is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorUsernameText(), "Username is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorPasswordText(), "Password is required.");
-        Assert.assertEquals(signUpFailurePage.getErrorConfirmPasswordText(), "Password confirmation is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorFirstNameText(), "First name is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorLastNameText(), "Last name is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorAddressText(), "Address is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorCityText(), "City is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorStateText(), "State is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorZipCodeText(), "Zip Code is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorSNNText(), "Social Security Number is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorUsernameText(), "Username is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorPasswordText(), "Password is required.");
+        Assertions.assertEquals(signUpFailurePage.getErrorConfirmPasswordText(), "Password confirmation is required.");
     }
 }
